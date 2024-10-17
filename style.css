@@ -11,9 +11,9 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #333333;
     padding: 20px;
-    background-color: #333333; /* Optional: Set a different background color for the rest of the page */
+    background-color: #030117; /* Optional: Set a different background color for the rest of the page */
 }
 
 /* Stretch image and blend it nicely with background */
@@ -53,23 +53,28 @@ ul.navigation a {
     padding: 20px; 
     text-decoration: none;
     color: rgb(255, 255, 255); 
-    font-size: 30px;
+    font-size: 20px;
     border-bottom: 2px solid #fffefe; 
     transition: transform 0.3s ease, background 0.3s ease;  
 }
 
 ul.navigation a:hover {
     background-color: #b2b2b3;
+    transform: scale(1.1); /* Slightly scale the link on hover */
+    color: #000000; /* Change color to black on hover */
 }
+
 
 /* GoEurope Summary Section Styling */
 .summary-text {
     padding: 20px;
     color: #ffffff; /* Make the text white to stand out on the dark background */
-    background-color: #444; /* Slightly darker background for the text section */
-    margin: 20px auto;
+    background-color: rgb(4, 2, 29); /* Slightly darker background for the text section */
+    margin: 40px auto; /* Add more margin to the top for spacing */
     max-width: 800px;
     text-align: center;
+    position: relative; /* Ensures proper placement below the image */
+    z-index: 1; /* Ensures the text appears on top of other elements */
 }
 
 .summary-text h1 {
@@ -79,4 +84,44 @@ ul.navigation a:hover {
 .summary-text p {
     font-size: 18px;
     line-height: 1.6;
+}
+
+/* Section with Image and Text Overlay */
+.image-text-section {
+    margin: 100px 0;
+    position: bottom;
+    text-align: center;
+}
+
+.image-with-text {
+    position: relative;
+    width: 100%;
+    max-height: 400px; /* Adjust the height as needed */
+}
+
+.background-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 600px; /* Keep height consistent */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better text visibility */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.text-overlay h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.text-overlay p {
+    font-size: 30px;
 }
